@@ -8,7 +8,7 @@ namespace Session_03
 {
     internal class Institutes
     {
-        private Guid InstituteId { get; set; }
+        private Guid ID { get; set; }
         public string Name { get; set; }
         public int YearsInService { get; set; }
 

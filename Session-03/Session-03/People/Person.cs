@@ -8,7 +8,7 @@ namespace Session_03
 {
     internal class Person
     {
-        internal Guid PersonId { get; set; }
+        internal Guid ID { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
 
