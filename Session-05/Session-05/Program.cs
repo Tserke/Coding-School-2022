@@ -10,19 +10,20 @@ namespace Session_05
     {
         static void Main(string[] args)
         {
+            string input;
             ActionRequest actionRequest = new ActionRequest();
             Console.WriteLine(" Please tell me what you whant to do? Convert, Uppercase, Reverse?");
             actionRequest.RequestID = Guid.NewGuid();
-            actionRequest.Input=Console.ReadLine();
+            input=Console.ReadLine();
             try
             {
-                if (actionRequest.Input == "Convert")
+                if (input == "Convert")
                 {
                     actionRequest.Action = ActionEnum.Convert;
-                }else if (actionRequest.Input == "Uppercase")
+                }else if (input == "Uppercase")
                 {
                     actionRequest.Action = ActionEnum.Uppercase;
-                }else if (actionRequest.Input == "Reverce")
+                }else if (input == "Reverce")
                 {
                     actionRequest.Action = ActionEnum.Reverce;
                 }
@@ -35,7 +36,8 @@ namespace Session_05
                 message.message= ex.ToString();
                 //throw;
             }
-            actionRequest.Action = ActionEnum.Uppercase;
+            Console.WriteLine("Please the Value you want to compute");
+
             ActionResolver resolver = new ActionResolver();
             resolver.Execute(actionRequest);
             ActionResponse response = resolver.Execute(actionRequest);
