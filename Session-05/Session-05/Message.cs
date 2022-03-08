@@ -15,5 +15,14 @@ namespace Session_05
         {
                
         }
+
+        public string DebugLog(string ex)
+        {
+            ID = Guid.NewGuid();
+            DateTime = DateTime.Now;
+            message = ex;
+
+            return $"{ID} {DateTime} {ex}";
+        }
     }
 }

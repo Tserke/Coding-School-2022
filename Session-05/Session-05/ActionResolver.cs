@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Session_05
 {
     internal class ActionResolver
-    {
+    {  
+
         public ActionResolver()
         {
 
@@ -15,12 +16,13 @@ namespace Session_05
 
         public ActionResponse Execute(ActionRequest request)
         {
-
+            
             var response = new ActionResponse();
             response.ResponseID = Guid.NewGuid();
             response.RequestID = request.RequestID;
+            MessageLogger logger=new MessageLogger();
+            logger.Write(request.RequestID,response.ResponseID, request.Action, request.Input);
 
-            // DO ALL THE THINGS!
             if (request.Action == ActionEnum.Convert)
             {
                 int[] binaryNum = new int[32];
@@ -53,7 +55,6 @@ namespace Session_05
                 }
 
             }
-
             return response;
         }
 
