@@ -12,6 +12,7 @@ namespace Session_06
 {
     public partial class Form1 : Form
     {
+        string firstNumber,secondNumber,operation;
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Session_06
         private void buttonClean_Click(object sender, EventArgs e)
         {
             this.textBox.Text = null;
+            buttonDot.Enabled = true;
         }
 
 
@@ -117,21 +119,32 @@ namespace Session_06
         private void buttonDot_Click(object sender, EventArgs e)
         {
             this.textBox.Text += ".";
+            buttonDot.Enabled = false;
+        }
+
+        private void buttonPlus_Click_1(object sender, EventArgs e)
+        {
+            Button b=(Button)sender;
+            firstNumber = this.textBox.Text;
+            operation = b.Text;
+            textBox.Text = null;
+            buttonDot.Enabled = true;
         }
 
 
         //--------- Execution---------------
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-            Manager manager = new Manager();
-            manager.Manage(this.Text);
+         
         }
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
-
+            secondNumber = this.textBox.Text;
+            Manager manager = new Manager();
+            this.textBox.Text = manager.Manage(firstNumber, secondNumber, operation);
         }
 
-
+         
     }
 }

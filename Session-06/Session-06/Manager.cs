@@ -13,26 +13,21 @@ namespace Session_06
         {
 
         }
-
-        string[] numbers;
-        string oparation;
-        bool isNum;
-        int counter=0;
-        public void Manage(string input)
+        bool isZero=false;
+        public string Manage(string firstNumber,string secondNumber,string operation)
         {
-            CharacterSeparator characterSeparator = new CharacterSeparator();
-            isNum=characterSeparator.IsNum(input);
-            while (isNum == true)
+            if (Convert.ToDouble(secondNumber) == 0.0)
             {
-                NumberFinder numberFinder = new NumberFinder();
-                numbers[counter]=numberFinder.NumFinder(input);
+                isZero = true;
             }
-            counter++;
-            if (isNum == false)
-            {
-                oparation = input;
+            if (isZero == false) 
+            { 
+            Operator operate = new Operator();
+            return (operate.FindOperation(firstNumber, secondNumber, operation).ToString());
             }
-   
+            else { 
+            return "0";
+            }
         }
 
     }

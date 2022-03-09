@@ -88,7 +88,7 @@
             this.buttonPlus.TabIndex = 13;
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = true;
-            this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
+            this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click_1);
             // 
             // buttonOne
             // 
@@ -128,7 +128,7 @@
             this.buttonMinus.TabIndex = 14;
             this.buttonMinus.Text = "-";
             this.buttonMinus.UseVisualStyleBackColor = true;
-            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
+            this.buttonMinus.Click += new System.EventHandler(this.buttonPlus_Click_1);
             // 
             // buttonFour
             // 
@@ -168,7 +168,7 @@
             this.buttonMultiply.TabIndex = 15;
             this.buttonMultiply.Text = "X";
             this.buttonMultiply.UseVisualStyleBackColor = true;
-            this.buttonMultiply.Click += new System.EventHandler(this.buttonMultiply_Click);
+            this.buttonMultiply.Click += new System.EventHandler(this.buttonPlus_Click_1);
             // 
             // buttonSeven
             // 
@@ -208,7 +208,7 @@
             this.buttonDivide.TabIndex = 16;
             this.buttonDivide.Text = "/";
             this.buttonDivide.UseVisualStyleBackColor = true;
-            this.buttonDivide.Click += new System.EventHandler(this.buttonDivide_Click);
+            this.buttonDivide.Click += new System.EventHandler(this.buttonPlus_Click_1);
             // 
             // buttonSqrt
             // 
@@ -218,7 +218,7 @@
             this.buttonSqrt.TabIndex = 17;
             this.buttonSqrt.Text = "Sqrt";
             this.buttonSqrt.UseVisualStyleBackColor = true;
-            this.buttonSqrt.Click += new System.EventHandler(this.buttonSqrt_Click);
+            this.buttonSqrt.Click += new System.EventHandler(this.buttonPlus_Click_1);
             // 
             // buttonPow
             // 
@@ -228,7 +228,7 @@
             this.buttonPow.TabIndex = 18;
             this.buttonPow.Text = "Pow";
             this.buttonPow.UseVisualStyleBackColor = true;
-            this.buttonPow.Click += new System.EventHandler(this.buttonPow_Click);
+            this.buttonPow.Click += new System.EventHandler(this.buttonPlus_Click_1);
             // 
             // buttonClean
             // 
@@ -280,6 +280,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.buttonPlus_Click_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

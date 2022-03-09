@@ -12,11 +12,28 @@ namespace Session_06
         {
 
         }
-
-        public string FindOperation(string input)
+        public double FindOperation(string firstNumber, string secondNumber, string operation)
         {
             
-            return input;
+            switch (operation)
+            {
+                case "+":
+                    return Convert.ToDouble(firstNumber) + Convert.ToDouble(secondNumber);
+                case "-":
+                    return Convert.ToDouble(firstNumber)-Convert.ToDouble(secondNumber);
+                case "X":
+                    return Convert.ToDouble(firstNumber)*Convert.ToDouble(secondNumber);
+                case "/":
+                    return Convert.ToDouble(firstNumber)/Convert.ToDouble(secondNumber);
+                case "Pow":
+                    return Math.Pow(Convert.ToDouble(firstNumber),Convert.ToDouble(secondNumber));
+                case "Sqrt":
+                    return Convert.ToDouble(firstNumber)*Math.Sqrt(Convert.ToDouble(secondNumber));
+                default:
+                    return 0;
+
+            }
+           
         }
     }
 }
