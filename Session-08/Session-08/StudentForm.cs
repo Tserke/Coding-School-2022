@@ -59,8 +59,14 @@ namespace Session_08
         private void SelectStudent()
         {
 
-            if (_selectedStudent!= null)
+            if (_selectedStudent != null && studentList.SelectedIndex>0)
+            {
                 _selectedStudent = _university.Students[studentList.SelectedIndex];
+            }
+            //else
+            //{
+            //    ShowList();
+            //}
         }
         private void ShowList()
         {
@@ -102,14 +108,14 @@ namespace Session_08
 
         private void btnLoadStudent_Click(object sender, EventArgs e)
         {
-            UpdateStudent();
+            
 
             ShowList();
         }
 
         private void btnCloseStudent_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -127,6 +133,8 @@ namespace Session_08
 
                 _selectedStudent = null;
 
+
+
                 ShowList();
             }
             DisplayStudent();
@@ -135,6 +143,7 @@ namespace Session_08
         private void btnAdd_Click(object sender, EventArgs e)
         {
             CreateStudent();
+            ShowList();
         }
         private LibUniversity.Student CreateStudent()
         {
@@ -167,6 +176,19 @@ namespace Session_08
             studentForm.Students = _university.Students;
             DisplayStudent();            
       
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateStudent();
+        }
+
+        private void btnSaveStudent_Click(object sender, EventArgs e)
+        {
+            
+            SaveData();
+            UpdateStudent();
+            ShowList();
         }
     }
 }

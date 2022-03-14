@@ -73,19 +73,4 @@ namespace LibUniversity
         }
 
     }
-
-    [Serializable]
-    public class PetShop
-    {
-
-        public List<Student>? Pets { get; set; }
-
-        public PetShop()
-        {
-
-        }
-
-
-
-    }
 }

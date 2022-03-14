@@ -94,7 +94,7 @@
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(153, 34);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
@@ -146,7 +146,7 @@
             // 
             // btnLoadStudent
             // 
-            this.btnLoadStudent.Location = new System.Drawing.Point(396, 399);
+            this.btnLoadStudent.Location = new System.Drawing.Point(380, 399);
             this.btnLoadStudent.Name = "btnLoadStudent";
             this.btnLoadStudent.Size = new System.Drawing.Size(131, 47);
             this.btnLoadStudent.TabIndex = 28;
@@ -156,12 +156,13 @@
             // 
             // btnSaveStudent
             // 
-            this.btnSaveStudent.Location = new System.Drawing.Point(259, 399);
+            this.btnSaveStudent.Location = new System.Drawing.Point(243, 399);
             this.btnSaveStudent.Name = "btnSaveStudent";
             this.btnSaveStudent.Size = new System.Drawing.Size(131, 47);
             this.btnSaveStudent.TabIndex = 27;
             this.btnSaveStudent.Text = "Save";
             this.btnSaveStudent.UseVisualStyleBackColor = true;
+            this.btnSaveStudent.Click += new System.EventHandler(this.btnSaveStudent_Click);
             // 
             // btnDelete
             // 
@@ -212,7 +213,6 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.studentList);
             this.Name = "StudentForm";
-            this.Text = "StudentForm";
             this.Load += new System.EventHandler(this.StudentForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
