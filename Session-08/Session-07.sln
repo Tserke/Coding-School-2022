@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session-08", "Session-08\Session-08.csproj", "{191DA3D7-D7ED-4651-A478-3A7A0B1BA8E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session-07", "Session-08\Session-07.csproj", "{191DA3D7-D7ED-4651-A478-3A7A0B1BA8E9}"
 	ProjectSection(ProjectDependencies) = postProject
 		{EF12EB80-6D32-4168-960D-43055ED6088A} = {EF12EB80-6D32-4168-960D-43055ED6088A}
 	EndProjectSection
