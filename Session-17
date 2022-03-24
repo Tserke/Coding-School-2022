@@ -1,0 +1,26 @@
+1 Εάν χρησιμοποιήσουμε την μέθοδο POST δεν θα είναι διαθέσιμο ολόκληρο το url μας στο request.
+
+2. Αν κάνουμε GET request ένα jpeg image θα έχουμε ένα MIME_type response και ειδικότερα ένα image/jped type.
+Πηγή: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+
+3. Αυτό μπορεί να γίνει με cache-control: max-age= 86400.
+Πηγή: https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
+
+4. Είναι όντως πιθανό μια εφαρμογή να κάνει μόνο GET requests. 
+
+5. Είναι πιθανό να υπάρξει εφαρμογή να κάνει μόνο POST requests.
+
+6. Το status code θα μπορούσε να είναι το 400 Bad Request. Λόγο του ότι λείπει ένα υποχρεωτικό πεδίο όποτε χωρίς την κατάλληλες διορθώσεις δεν πρέπει να γίνει ξανά προσπάθεια επικοινωνίας.
+Πηγή: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses
+
+7. Τα status code θα μπορούσαν να είναι το 502 ή 503. Θεωρώ πως ανάλογα την περίσταση ίσως κάποιο από τα δυο είναι πιο σωστό. Το 502 αποθαρρύνει λίγο περισσότερο. Όποτε ίσως το 503 είναι πιο σωστό γιατί δείχνει ότι η λειτουργιά θα αποκατασταθεί.
+Πηγή: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses
+
+8. Υπάρχει αυτή η δυνατότητα άλλα όμως δεν συνίσταται καθώς το τα στοιχειά του χρήστη (username & password) γίνονται μέρος το url.
+Πηγή: https://www.baeldung.com/logout-get-vs-post
+
+9. Η διαφορά ανάμεσα στις δυο μεθόδους είναι πως το PUT όσες φόρες και να καλεστεί έχει το ίδιο αποτέλεσμα αντίθετα το POST όσες φορές το καλέσουμε θα “εκτελεστεί” κάθε φορά.
+Πηγή: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST
+
+10. Με την μέθοδο POST μπορούμε να ανεβάσουμε ένα αρχείο.
+Πηγή: https://www.httpwatch.com/httpgallery/methods/
