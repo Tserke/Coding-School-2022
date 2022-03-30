@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session-20 ex:1,2</title>
+</head>
+<body>
+    <form id="reverseTxt">
+        <input id="txtToReverse" type="text">
+        <button id="doTxtReverse" onclick="displayReversedText()" type="button">reverse</button>
+        <output id="reversedTxt"></output>
+        <br>
+        <input id="txtToPalindromeCheck" type="text">
+        <button id="doPalindromeCheck" onclick="PalindromeCheck()" type="button">Palindrome Check</button>
+        <output id="palindromeCheckResult"></output>
+    </form>
+
+<script type="text/javascript" defer>
+
+    function displayReversedText(){
+        let txtInput = document.getElementById("txtToReverse");
+        let txtToReverse = txtInput.value;
+        let reversedTxt = reverseText(txtToReverse);
+        document.getElementById("reversedTxt").value = reversedTxt;
+    }
+
+    function reverseText(txtToReverse){
+
+        return txtToReverse.split("").reverse().join("").toString();
+    }
+
+    function PalindromeCheck(){
+        let txtInput = document.getElementById("txtToPalindromeCheck");
+        let txtOriginal = txtInput.value;
+        let txtReversed = reverseText(txtOriginal);
+        if (txtOriginal === txtReversed){
+            document.getElementById("palindromeCheckResult").value = "Text IS Palindrome";
+        }
+        else if( txtOriginal != txtReversed){
+            document.getElementById("palindromeCheckResult").value = "Text is NOT Palindrome";
+        }else{
+            document.getElementById("palindromeCheckResult").value = "Something when't Wrong";
+        }
+    }
+
+</script>
+</body>
+</html>
